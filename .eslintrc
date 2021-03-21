@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 10
+  },
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
+  "rules": {
+    "no-console": "off"
+  },
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(ts|tsx)",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin: @typescript-eslint/recommended",
+        "eslint-config-pretier/@typescript-eslint"
+      ]
+    }
+  ]
+}
