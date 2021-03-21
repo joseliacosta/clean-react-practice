@@ -1,0 +1,11 @@
+{
+  "name": "clean-react-practice",
+  "version": "1.0.0",
+  "description": "A study case of TDD, Clean Architecture, Design Patterns and SOLID using React, TypeScript and Hooks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joselia Costa",
+  "license": "ISC"
+}
