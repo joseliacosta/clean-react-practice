@@ -1,9 +1,9 @@
 {
   "*.+(js|ts|tsx)":[
-    "eslint"
+    "eslint",
+    "npm run test:staged"
   ],
   "**/*.+(js|json|ts|tsx)": [
     "prettier --write",
-    "git add"
   ]
 }

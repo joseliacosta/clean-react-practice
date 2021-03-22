@@ -10,11 +10,15 @@
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx,.jsx",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
     "validate": "npm-run-all --parallel check-types check-format lint",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm run test -- --watch",
+    "test:staged": "npm run test -- --findRelatedTests",
+    "test:ci": "npm run test -- --coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check-types && lint-staged"
+      "pre-commit": "npm run check-types && lint-staged",
+      "pre-push": "npm run test:ci"
     }
   },
   "config": {
