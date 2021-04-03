@@ -1,9 +1,9 @@
-import {HttpResponse, HttpStatusCode} from '@/data/protocols/http/http-response'
 import {
+  HttpResponse,
+  HttpStatusCode,
   HttpPostClient,
   HttpPostParams,
-} from '@/data/protocols/http/http-post-client'
-
+} from '@/data/protocols/http'
 export class HttpPostClientSpy<T, Response>
   implements HttpPostClient<T, Response> {
   url?: string
