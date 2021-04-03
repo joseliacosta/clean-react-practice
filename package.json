@@ -7,19 +7,12 @@
     "check-format": "npm run prettier -- --list-different",
     "check-types": "tsc",
     "format": "npm run prettier -- --write",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx,.jsx",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
     "validate": "npm-run-all --parallel check-types check-format lint",
     "test": "jest --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "test:staged": "npm run test -- --findRelatedTests",
     "test:ci": "npm run test -- --coverage"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check-types && lint-staged",
-      "pre-push": "npm run test:ci"
-    }
   },
   "config": {
     "commitizen": {
@@ -30,17 +23,21 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^26.0.21",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "eslint": "^7.22.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^8.1.0",
-    "husky": "^4.3.8",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.4",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "ts-jest": "^26.5.4",
+    "eslint-config-standard-with-typescript": "^11.0.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "git-commit-msg-linter": "^2.4.2",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
+    "ts-jest": "^25.5.0",
     "typescript": "^4.2.3"
   }
 }
