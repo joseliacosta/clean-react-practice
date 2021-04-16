@@ -10,7 +10,7 @@
   "extends": [
     "standard-with-typescript",
     "eslint-config-prettier",
-    "plugin: react/recommended"
+    "plugin:react/recommended"
   ],
   "plugins": ["react"],
 
